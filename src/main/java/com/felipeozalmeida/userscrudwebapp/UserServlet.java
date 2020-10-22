@@ -41,7 +41,7 @@ public class UserServlet extends HttpServlet {
     private void create(final HttpServletRequest request, final HttpServletResponse response)
             throws ServletException, IOException {
         request.setAttribute("statuses", STATUSES);
-        request.setAttribute("tipos", TYPES);
+        request.setAttribute("types", TYPES);
         request.getRequestDispatcher("user/edit.jsp").forward(request, response);
     }
 
@@ -59,7 +59,7 @@ public class UserServlet extends HttpServlet {
         final UsuarioBean usuBusca = controller.busca(usu);
         request.setAttribute("usu", usuBusca);
         request.setAttribute("statuses", STATUSES);
-        request.setAttribute("tipos", TYPES);
+        request.setAttribute("types", TYPES);
         request.getRequestDispatcher("user/edit.jsp").forward(request, response);
     }
 
